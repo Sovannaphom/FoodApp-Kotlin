@@ -111,7 +111,6 @@ class MealActivity : AppCompatActivity() {
 
     //loading case
     private fun loadingCase() {
-
         binding.progressBar.visibility = View.VISIBLE
         binding.btnAddToFav.visibility = View.INVISIBLE
         binding.tvInstructions.visibility = View.INVISIBLE
@@ -123,7 +122,6 @@ class MealActivity : AppCompatActivity() {
 
     //respond case
     private fun respondCase() {
-
         binding.progressBar.visibility = View.INVISIBLE
         binding.btnAddToFav.visibility = View.VISIBLE
         binding.tvInstructions.visibility = View.VISIBLE
