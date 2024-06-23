@@ -61,6 +61,7 @@
                 android:id="@+id/random_meal_card"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_200sdp"
+                app:cardCornerRadius="@dimen/_13ssp"
                 android:layout_marginStart="@dimen/_25sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
@@ -118,6 +119,7 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
                 app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/_13ssp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_category">
