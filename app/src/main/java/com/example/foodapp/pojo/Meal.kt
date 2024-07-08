@@ -1,5 +1,8 @@
 package com.example.foodapp.pojo
 
+import androidx.room.Entity
+
+@Entity(tableName = "mealInformation")
 data class Meal(
     val dateModified: Any,
     val idMeal: String,
