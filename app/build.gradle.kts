@@ -44,8 +44,6 @@ android {
 
 dependencies {
 
-    //val room_version = "2.3.0"
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -74,16 +72,20 @@ dependencies {
 
     // Glide: powerful image loading
     implementation(libs.glide)
-    //noinspection KaptUsageInsteadOfKs
+    //noinspection KaptUsageInsteadOfKsp,KaptUsageInsteadOfKs
     kapt(libs.glide.compiler)
 
-    //videoModel mvvm
+    //videoModel and LiveData
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
     implementation (libs.androidx.lifecycle.livedata.ktx)
 
     // Room for database management
     implementation(libs.room.runtime)
+    //noinspection KaptUsageInsteadOfKsp
     kapt(libs.androidx.room.compiler.v230)
     implementation(libs.androidx.room.ktx)
+
+    //view model scope
+    implementation(libs.androidx.lifecycle.viewmodel.ktx.v240)
 
 }

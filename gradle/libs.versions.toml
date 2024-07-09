@@ -4,6 +4,7 @@ androidGradlePlugin = "8.3.2"
 coreKtx = "1.13.1"
 appCompat = "1.7.0"
 lifecycleViewmodelKtx = "2.8.3"
+lifecycleViewmodelKtxVersion = "2.4.0"
 material = "1.12.0"
 activity = "1.9.0"
 constraintLayout = "2.1.4"
@@ -27,6 +28,7 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appCompat" }
 androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleViewmodelKtx" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+androidx-lifecycle-viewmodel-ktx-v240 = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtxVersion" }
 androidx-room-compiler-v230 = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomCompiler" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }

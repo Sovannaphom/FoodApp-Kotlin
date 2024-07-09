@@ -1,5 +1,6 @@
 package com.example.foodapp.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +11,7 @@ import com.example.foodapp.pojo.MealsByCategory
 class CategoryMealsAdapter : RecyclerView.Adapter<CategoryMealsAdapter.CategoryMealsViewModel>() {
     private var mealsList = ArrayList<MealsByCategory>()
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setMealsList(mealsList: List<MealsByCategory>){
 
         this.mealsList = mealsList as ArrayList<MealsByCategory>
