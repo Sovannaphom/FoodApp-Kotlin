@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id("kotlin-android")
     id("kotlin-kapt")
 }
 
@@ -44,6 +43,7 @@ android {
 }
 
 dependencies {
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -53,6 +53,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 
     // Navigation component
     implementation(libs.androidx.navigation.fragment.ktx)
@@ -71,10 +72,20 @@ dependencies {
 
     // Glide: powerful image loading
     implementation(libs.glide)
-    //noinspection KaptUsageInsteadOfKsp
+    //noinspection KaptUsageInsteadOfKsp,KaptUsageInsteadOfKs
     kapt(libs.glide.compiler)
 
-    //videoModel mvvm
+    //videoModel and LiveData
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
     implementation (libs.androidx.lifecycle.livedata.ktx)
+
+    // Room for database management
+    implementation(libs.room.runtime)
+    //noinspection KaptUsageInsteadOfKsp
+    kapt(libs.androidx.room.compiler.v230)
+    implementation(libs.androidx.room.ktx)
+
+    //view model scope
+    implementation(libs.androidx.lifecycle.viewmodel.ktx.v240)
+
 }
