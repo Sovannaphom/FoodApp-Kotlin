@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.foodapp.db.MealDatabase
 import com.example.foodapp.pojo.Category
 import com.example.foodapp.pojo.CategoryList
 import com.example.foodapp.pojo.MealByCategoryList
@@ -22,7 +23,9 @@ import retrofit2.Response
  * popular items, and categories. It communicates with the Retrofit API service to fetch data and exposes this
  * data to the UI through LiveData.
  */
-class HomeViewModel() : ViewModel() {
+class HomeViewModel(
+    private val mealDatabase: MealDatabase
+) : ViewModel() {
 
     /**
      * LiveData that holds a single random meal.
@@ -47,6 +50,9 @@ class HomeViewModel() : ViewModel() {
      * Observers can subscribe to this LiveData to receive updates when the list of categories changes.
      */
     private var categoriesLiveData = MutableLiveData<List<Category>>()
+
+    // Initializes a LiveData object that observes and holds a list of all meals from the meal database
+    private var favoritesMealLiveData = mealDatabase.mealDao().getAllMeals()
 
     /**
      * Fetches a random meal from the API and updates the [randomMealLiveData].
