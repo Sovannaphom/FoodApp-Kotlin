@@ -3,6 +3,11 @@ package com.example.foodapp.pojo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+/**
+ *
+ * Data class representing a meal, used for storing meal information in the database.
+ *
+ */
 @Entity(tableName = "mealInformation")
 data class Meal(
     val dateModified: Any?,
